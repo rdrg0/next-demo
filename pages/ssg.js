@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 
 export default function Home({ posts }) {
   return (
@@ -17,17 +16,20 @@ export default function Home({ posts }) {
           Blog demo
         </h1>
 
+        <p className={styles.description}>
+          Static Site Generator
+        </p>
         <div className={styles.grid}>
-          <Link href="/ssr">
-            <div className={styles.card}>
-              SSR
-            </div>
-          </Link>
-          <Link href="/ssg">
-            <div className={styles.card}>
-              SSG
-            </div>
-          </Link>
+          {
+            posts.map((post) => (
+
+              <div key={post.id} href="https://nextjs.org/docs" className={styles.card}>
+                <h2>{post.title}</h2>
+                <p>{post.description}</p>
+              </div>
+
+            ))
+          }
         </div>
 
       </main>
