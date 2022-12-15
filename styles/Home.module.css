@@ -29,7 +29,6 @@
 }
 
 .title a {
-  color: #0070f3;
   text-decoration: none;
 }
 
@@ -57,7 +56,6 @@
 }
 
 .code {
-  background: #fafafa;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -79,18 +77,13 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+
 
 .card h2 {
   margin: 0 0 1rem 0;
@@ -115,15 +108,4 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-}
+
